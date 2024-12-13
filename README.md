@@ -1,0 +1,1 @@
+A fully functioning wiki website that allows the user to search up wiki pages, edit them, and create new ones (if the user tries to create a page without putting anyting in its title or contents, the web will request to fill out these fields). There is also an ability to get transferred to a random page by clicking a respective button. 
