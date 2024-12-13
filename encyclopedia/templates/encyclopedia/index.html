@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {% if found %}
+        Encyclopedia
+    {% else %}
+        {{ title }}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    {% if found %}
+        <h1>All Pages</h1>
+        <hr class="home-line">
+    {% else %}
+        <h1>Search Results for <i>"{{ title }}"</i></h1>
+    {% endif %}
+    <ul>
+        {% for entry in entries %}
+            <li><a href="{% url 'page' entry %}">{{ entry }}</a></li>  <!-- The url 'page' refers to a url pattern in urls.py -->
+        {% endfor %}
+    </ul>
+{% endblock %}
